@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С днем рождения!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="home">
+       <img src="image/1034.jpg" class="img-slide active">
+       <img src="image/2.jpg" class="img-slide">
+       <img src="image/4.jpg" class="img-slide">
+       <img src="image/5.jpg" class="img-slide">
+       <img src="image/3.jpg" class="img-slide">
+       <img src="image/6.jpg" class="img-slide">
+       
+       
+       
+        <div class="content active">
+          <h1>Поздравляю <br>Лучшую подругу</h1>
+        </div>
+        
+        <div class="content">
+            <h1>Поздравляю <br>Лучшего человека</h1>
+          </div>  
+
+          <div class="content">
+            <h1>Поздравляю <br>Лучшую сестру</h1>
+          </div>  
+
+          <div class="content">
+            <h1>Поздравляю <br>Лучшую дочь</h1>
+          </div>  
+
+          <div class="content">
+            <h1>Поздравляю  <br>Наше солнце</h1>
+          </div>
+          <div class="content">
+            <h1>Поздравляю <br>Тебя</h1>
+            <p>Искренне поздравляю тебя с этим днем. Желаю тебе только всего наилучшего в жизни. Чтобы в жизни всегда было здоровье, счастье и успех. <br>Оставайся такой же позитивной, сияющей и солнечным человеком, который всегда поможет и поднимет настроение. <br>Надеюсь, что все твои цели и мечты будут исполнены. <br>Самое главное, чтобы ты была счастлива своей жизнью </p>
+          </div>    
+    
+         <div class="slider-navigation">
+           <div class="nav-btn"></div>
+           <div class="nav-btn"></div>
+           <div class="nav-btn"></div>
+           <div class="nav-btn"></div>
+           <div class="nav-btn"></div>
+           <div class="nav-btn"></div>
+         </div>
+    </section>
+
+
+    <script>
+      const btns = document.querySelectorAll(".nav-btn")
+      const slides = document.querySelectorAll(".img-slide") 
+      const contents = document.querySelectorAll(".content")  
+      
+      var sliderNav = function(manual){
+        btns.forEach((btn) =>{
+          btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) =>{
+          slide.classList.remove("active");
+        });
+
+        contents.forEach((content) =>{
+          content.classList.remove("active");
+        });
+
+
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");    
+      }
+
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i);
+        });
+      });
+    </script>
+</body>
+</html>
